@@ -93,4 +93,9 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "get-txid-from-raw", ["0x" + SAMPLE_TX], deployer);
         expect(result.result).toBeOk(Object({ value: "0x393c66f7704206584065a44ef6e8648316279f649db60492167f536e2f17088a" }));
     });
+
+    it("should extract input count correctly", () => {
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-tx-ins-count", ["0x" + SAMPLE_TX], deployer);
+        expect(result.result).toBeOk(Object({ value: 1n }));
+    });
 });
