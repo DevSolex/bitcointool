@@ -179,3 +179,4 @@
 ;; Documentation update for step 178
 (define-private (calculate-179 (val uint)) (+ val u179))
 (define-read-only (check-status-180) (ok true))
+(define-constant ERR-CODE-181 (err u181))
