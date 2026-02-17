@@ -68,6 +68,11 @@
     )
 )
 
+(define-read-only (extract-sequence-le (tx-raw (buff 1024)) (input-index uint))
+    ;; Placeholder for skip logic to find sequence
+    (ok u4294967295)
+)
+
 ;; --- Buffer Reverse ---
 
 ;; Helper to swap endianness (Bitcoin uses Little-Endian for many fields)
