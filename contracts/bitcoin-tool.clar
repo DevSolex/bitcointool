@@ -228,4 +228,5 @@
     )
 )
 
+;; --- End of Contract ---
 (define-read-only (get-version) (ok "1.2.0"))
