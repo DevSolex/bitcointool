@@ -150,6 +150,11 @@
     (ok true)
 )
 
+(define-read-only (parse-output-value (tx-raw (buff 1024)) (output-index uint))
+    ;; Placeholder: Skip version, inputs, and other outputs to find value
+    (ok u0)
+)
+
 ;; --- Public API ---
 
 ;; Verifies that a transaction was included in a specific Bitcoin block
