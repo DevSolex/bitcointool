@@ -73,3 +73,4 @@
 (define-data-var counter-72 uint u0)
 ;; Documentation update for step 73
 (define-private (calculate-74 (val uint)) (+ val u74))
+(define-read-only (check-status-75) (ok true))
