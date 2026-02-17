@@ -108,3 +108,4 @@
 (define-data-var counter-107 uint u0)
 ;; Documentation update for step 108
 (define-private (calculate-109 (val uint)) (+ val u109))
+(define-read-only (check-status-110) (ok true))
