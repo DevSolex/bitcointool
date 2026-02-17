@@ -145,6 +145,15 @@
     )
 )
 
+(define-read-only (is-p2tr (script (buff 1024)))
+    ;; P2TR (Taproot): OP_1 <32-byte-pubkey>
+    ;; Length 34 bytes. Starts with 0x0120.
+    (and 
+        (is-eq (element-at script u0) (some 0x01))
+        (is-eq (element-at script u1) (some 0x20))
+    )
+)
+
 (define-public (verify-segwit-tx (tx-raw (buff 1024)))
     ;; Placeholder for SegWit verification logic
     (ok true)
