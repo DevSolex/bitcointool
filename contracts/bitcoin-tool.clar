@@ -170,3 +170,4 @@
 (define-private (calculate-169 (val uint)) (+ val u169))
 (define-read-only (check-status-170) (ok true))
 (define-constant ERR-CODE-171 (err u171))
+(define-data-var counter-172 uint u0)
