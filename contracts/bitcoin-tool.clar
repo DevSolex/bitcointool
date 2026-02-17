@@ -105,6 +105,11 @@
     (extract-uint8 tx-raw u4)
 )
 
+(define-read-only (extract-tx-outs-count (tx-raw (buff 1024)))
+    ;; Placeholder: Ideally skip inputs to find output count
+    (ok u0)
+)
+
 ;; --- Public API ---
 
 ;; Verifies that a transaction was included in a specific Bitcoin block
