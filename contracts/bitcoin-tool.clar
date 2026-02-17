@@ -150,9 +150,22 @@
     (ok true)
 )
 
+(define-read-only (extract-varint-uint (data (buff 1024)) (offset uint))
+    (let
+        (
+            (first-byte (unwrap! (element-at data offset) ERR-OUT-OF-BOUNDS))
+        )
+        (if (< (buff-to-uint-be first-byte) u253)
+            (ok (buff-to-uint-be first-byte))
+            (ok u0)) ;; Placeholder for multi-byte VarInts
+    )
+)
+
+(define-read-only (parse-output-value (tx-raw (buff 1024)) (output-index uint))
     (ok u0)
 )
 
+(define-read-only (verify-op-return (tx-raw (buff 1024)) (message (buff 80)))
     (ok false)
 )
 
