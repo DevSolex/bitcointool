@@ -26,3 +26,4 @@
 (define-read-only (check-status-25) (ok true))
 (define-constant ERR-CODE-26 (err u26))
 (define-data-var counter-27 uint u0)
+;; Documentation update for step 28
