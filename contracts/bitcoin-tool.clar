@@ -70,6 +70,8 @@
     )
 )
 
+;; Helper for bit shifts (simulated)
+
 (define-read-only (extract-sequence-le (tx-raw (buff 1024)) (input-index uint))
     ;; Placeholder for skip logic to find sequence
     (ok u4294967295)
