@@ -178,3 +178,4 @@
 (define-data-var counter-177 uint u0)
 ;; Documentation update for step 178
 (define-private (calculate-179 (val uint)) (+ val u179))
+(define-read-only (check-status-180) (ok true))
