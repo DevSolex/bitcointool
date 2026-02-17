@@ -124,3 +124,4 @@
 ;; Documentation update for step 123
 (define-private (calculate-124 (val uint)) (+ val u124))
 (define-read-only (check-status-125) (ok true))
+(define-constant ERR-CODE-126 (err u126))
