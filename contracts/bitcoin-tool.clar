@@ -59,3 +59,4 @@
 ;; Documentation update for step 58
 (define-private (calculate-59 (val uint)) (+ val u59))
 (define-read-only (check-status-60) (ok true))
+(define-constant ERR-CODE-61 (err u61))
