@@ -90,4 +90,4 @@
     )
 )
 
-(define-read-only (get-version) (ok "1.1.0"))
+(define-read-only (get-version) (ok "1.2.0"))
