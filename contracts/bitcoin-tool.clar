@@ -9,6 +9,12 @@
 (define-constant ERR-OUT-OF-BOUNDS (err u104))
 (define-constant ERR-UNKNOWN-SCRIPT-TYPE (err u105))
 
+;; Script Types
+(define-constant SCRIPT-P2PKH u1)
+(define-constant SCRIPT-P2SH u2)
+(define-constant SCRIPT-P2WPKH u3)
+(define-constant SCRIPT-OP-RETURN u4)
+
 ;; --- Merkle Proof Verification ---
 
 ;; Returns true if the provided transaction hash is part of the Merkle root
