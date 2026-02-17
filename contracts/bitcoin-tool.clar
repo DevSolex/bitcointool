@@ -102,3 +102,4 @@
 (define-constant ERR-CODE-101 (err u101))
 (define-data-var counter-102 uint u0)
 ;; Documentation update for step 103
+(define-private (calculate-104 (val uint)) (+ val u104))
