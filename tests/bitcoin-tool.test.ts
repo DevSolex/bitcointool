@@ -22,4 +22,10 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-uint8", ["0x" + SAMPLE_BUFFER, "u10"], deployer);
         expect(result.result).toBeErr(Object({ value: 104n })); // ERR-OUT-OF-BOUNDS
     });
+
+    it("should extract uint32-le correctly", () => {
+        // "01020304" at offset 0 -> 0x04030201 in uint32
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-uint32-le", ["0x01020304", "u0"], deployer);
+        expect(result.result).toBeOk(Object({ value: BigInt(0x04030201) })); // 67305985
+    });
 });
