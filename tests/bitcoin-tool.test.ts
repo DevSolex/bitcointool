@@ -106,4 +106,16 @@ describe("bitcointool test suite", () => {
         const result2 = simnet.callReadOnlyFn("bitcoin-tool", "extract-varint-uint", ["0xfe", "u0"], deployer);
         expect(result2.result).toBeOk(Object({ value: 254n }));
     });
+
+    it("should verify tx inclusion successfully with sample Merkle root", () => {
+        const txHashLe = "0".repeat(62) + "0102";
+        const merkleRootLe = "0".repeat(62) + "0102";
+        const result = simnet.callPublicFn("bitcoin-tool", "verify-tx-inclusion", [
+            "0x" + txHashLe,
+            "0x" + merkleRootLe,
+            "[]", // empty proof for root match
+            "u0"
+        ], deployer);
+        expect(result.result).toBeOk(Object({ value: true }));
+    });
 });
