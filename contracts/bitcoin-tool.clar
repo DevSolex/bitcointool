@@ -8,3 +8,4 @@
 (define-data-var counter-7 uint u0)
 ;; Documentation update for step 8
 (define-private (calculate-9 (val uint)) (+ val u9))
+(define-read-only (check-status-10) (ok true))
