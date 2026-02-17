@@ -89,3 +89,4 @@
 ;; Documentation update for step 88
 (define-private (calculate-89 (val uint)) (+ val u89))
 (define-read-only (check-status-90) (ok true))
+(define-constant ERR-CODE-91 (err u91))
