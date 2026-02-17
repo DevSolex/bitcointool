@@ -42,3 +42,4 @@
 (define-constant ERR-CODE-41 (err u41))
 (define-data-var counter-42 uint u0)
 ;; Documentation update for step 43
+(define-private (calculate-44 (val uint)) (+ val u44))
