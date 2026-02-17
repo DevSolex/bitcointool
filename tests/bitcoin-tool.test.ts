@@ -73,4 +73,11 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "is-p2sh", ["0x" + script], deployer);
         expect(result.result).toBeBool(false);
     });
+
+    it("should identify P2WPKH script correctly", () => {
+        // P2WPKH: 00 14 <20-byte-hash>
+        const script = "0014" + "0".repeat(40);
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "is-p2wpkh", ["0x" + script], deployer);
+        expect(result.result).toBeBool(true);
+    });
 });
