@@ -30,3 +30,4 @@
 (define-private (calculate-29 (val uint)) (+ val u29))
 (define-read-only (check-status-30) (ok true))
 (define-constant ERR-CODE-31 (err u31))
+(define-data-var counter-32 uint u0)
