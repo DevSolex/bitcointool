@@ -136,6 +136,15 @@
     )
 )
 
+(define-read-only (is-p2wpkh (script (buff 1024)))
+    ;; P2WPKH: OP_0 <20-byte-key-hash>
+    ;; Length 22 bytes. Starts with 0x0014.
+    (and 
+        (is-eq (element-at script u0) (some 0x00))
+        (is-eq (element-at script u1) (some 0x14))
+    )
+)
+
 ;; --- Public API ---
 
 ;; Verifies that a transaction was included in a specific Bitcoin block
