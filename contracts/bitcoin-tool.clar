@@ -150,9 +150,12 @@
     (ok true)
 )
 
-(define-read-only (parse-output-value (tx-raw (buff 1024)) (output-index uint))
-    ;; Placeholder: Skip version, inputs, and other outputs to find value
     (ok u0)
+)
+
+(define-read-only (verify-op-return (tx-raw (buff 1024)) (message (buff 80)))
+    ;; Placeholder: Check outputs for OP_RETURN
+    (ok false)
 )
 
 ;; --- Public API ---
