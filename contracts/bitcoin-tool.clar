@@ -15,3 +15,4 @@
 (define-private (calculate-14 (val uint)) (+ val u14))
 (define-read-only (check-status-15) (ok true))
 (define-constant ERR-CODE-16 (err u16))
+(define-data-var counter-17 uint u0)
