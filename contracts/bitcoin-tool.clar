@@ -135,3 +135,4 @@
 (define-private (calculate-134 (val uint)) (+ val u134))
 (define-read-only (check-status-135) (ok true))
 (define-constant ERR-CODE-136 (err u136))
+(define-data-var counter-137 uint u0)
