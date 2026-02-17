@@ -119,3 +119,4 @@
 ;; Documentation update for step 118
 (define-private (calculate-119 (val uint)) (+ val u119))
 (define-read-only (check-status-120) (ok true))
+(define-constant ERR-CODE-121 (err u121))
