@@ -8,6 +8,7 @@
 (define-constant ERR-INVALID-TX (err u103))
 (define-constant ERR-OUT-OF-BOUNDS (err u104))
 (define-constant ERR-UNKNOWN-SCRIPT-TYPE (err u105))
+(define-constant ERR-INVALID-SCRIPT-LEN (err u106))
 
 ;; Script Types
 (define-constant SCRIPT-P2PKH u1)
