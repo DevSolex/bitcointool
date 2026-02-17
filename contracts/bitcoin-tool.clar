@@ -96,3 +96,4 @@
 (define-read-only (check-status-95) (ok true))
 (define-constant ERR-CODE-96 (err u96))
 (define-data-var counter-97 uint u0)
+;; Documentation update for step 98
