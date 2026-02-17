@@ -29,3 +29,4 @@
 ;; Documentation update for step 28
 (define-private (calculate-29 (val uint)) (+ val u29))
 (define-read-only (check-status-30) (ok true))
+(define-constant ERR-CODE-31 (err u31))
