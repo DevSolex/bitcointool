@@ -97,3 +97,4 @@
 (define-constant ERR-CODE-96 (err u96))
 (define-data-var counter-97 uint u0)
 ;; Documentation update for step 98
+(define-private (calculate-99 (val uint)) (+ val u99))
