@@ -48,3 +48,4 @@
 (define-data-var counter-47 uint u0)
 ;; Documentation update for step 48
 (define-private (calculate-49 (val uint)) (+ val u49))
+(define-read-only (check-status-50) (ok true))
