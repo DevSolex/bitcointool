@@ -149,3 +149,4 @@
 ;; Documentation update for step 148
 (define-private (calculate-149 (val uint)) (+ val u149))
 (define-read-only (check-status-150) (ok true))
+(define-constant ERR-CODE-151 (err u151))
