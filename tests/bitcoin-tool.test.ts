@@ -80,4 +80,11 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "is-p2wpkh", ["0x" + script], deployer);
         expect(result.result).toBeBool(true);
     });
+
+    it("should identify P2TR (Taproot) script correctly", () => {
+        // P2TR: 01 20 <32-byte-hash>
+        const script = "0120" + "0".repeat(64);
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "is-p2tr", ["0x" + script], deployer);
+        expect(result.result).toBeBool(true);
+    });
 });
