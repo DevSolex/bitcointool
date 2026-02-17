@@ -153,9 +153,12 @@
     (ok u0)
 )
 
-(define-read-only (verify-op-return (tx-raw (buff 1024)) (message (buff 80)))
-    ;; Placeholder: Check outputs for OP_RETURN
     (ok false)
+)
+
+(define-read-only (check-n-locktime (tx-raw (buff 1024)) (min-locktime uint))
+    ;; Placeholder: Parse nLockTime field at the end of TX
+    (ok true)
 )
 
 ;; --- Public API ---
