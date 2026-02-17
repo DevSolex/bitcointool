@@ -174,3 +174,4 @@
 ;; Documentation update for step 173
 (define-private (calculate-174 (val uint)) (+ val u174))
 (define-read-only (check-status-175) (ok true))
+(define-constant ERR-CODE-176 (err u176))
