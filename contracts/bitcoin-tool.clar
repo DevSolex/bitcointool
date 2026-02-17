@@ -104,3 +104,4 @@
 ;; Documentation update for step 103
 (define-private (calculate-104 (val uint)) (+ val u104))
 (define-read-only (check-status-105) (ok true))
+(define-constant ERR-CODE-106 (err u106))
