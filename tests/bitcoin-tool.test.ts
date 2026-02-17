@@ -87,4 +87,10 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "is-p2tr", ["0x" + script], deployer);
         expect(result.result).toBeBool(true);
     });
+
+    it("should generate TXID correctly from raw tx", () => {
+        // Double SHA256 of SAMPLE_TX
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "get-txid-from-raw", ["0x" + SAMPLE_TX], deployer);
+        expect(result.result).toBeOk(Object({ value: "0x393c66f7704206584065a44ef6e8648316279f649db60492167f536e2f17088a" }));
+    });
 });
