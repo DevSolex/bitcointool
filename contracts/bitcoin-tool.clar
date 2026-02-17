@@ -187,3 +187,4 @@
 (define-constant ERR-CODE-186 (err u186))
 (define-data-var counter-187 uint u0)
 ;; Documentation update for step 188
+(define-private (calculate-189 (val uint)) (+ val u189))
