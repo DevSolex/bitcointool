@@ -12,4 +12,9 @@ describe("bitcointool test suite", () => {
         const version = simnet.callReadOnlyFn("bitcoin-tool", "get-version", [], deployer);
         expect(version.result).toBeOk(Object({ value: "1.3.0" }));
     });
+
+    it("should extract uint8 correctly", () => {
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-uint8", ["0x" + SAMPLE_BUFFER, "u1"], deployer);
+        expect(result.result).toBeOk(Object({ value: 2n }));
+    });
 });
