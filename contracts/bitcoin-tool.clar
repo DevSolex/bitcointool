@@ -37,3 +37,4 @@
 (define-constant ERR-CODE-36 (err u36))
 (define-data-var counter-37 uint u0)
 ;; Documentation update for step 38
+(define-private (calculate-39 (val uint)) (+ val u39))
