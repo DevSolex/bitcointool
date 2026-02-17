@@ -36,7 +36,18 @@
     )
 )
 
-;; --- Bitcoin Transaction Parsing (Basic) ---
+;; --- Buffer Utilities ---
+
+(define-read-only (extract-uint8 (data (buff 1024)) (offset uint))
+    (let
+        (
+            (byte (element-at data offset))
+        )
+        (ok (unwrap! byte ERR-OUT-OF-BOUNDS))
+    )
+)
+
+;; --- Buffer Reverse ---
 
 ;; Helper to swap endianness (Bitcoin uses Little-Endian for many fields)
 (define-read-only (reverse-buff32 (input (buff 32)))
