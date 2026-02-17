@@ -23,3 +23,4 @@
 (define-data-var counter-22 uint u0)
 ;; Documentation update for step 23
 (define-private (calculate-24 (val uint)) (+ val u24))
+(define-read-only (check-status-25) (ok true))
