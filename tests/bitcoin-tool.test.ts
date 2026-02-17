@@ -130,4 +130,16 @@ describe("bitcointool test suite", () => {
         ], deployer);
         expect(result.result).toBeErr(Object({ value: 101n })); // ERR-INVALID-PROOF
     });
+
+    it("should fail inclusion check when index mismatch", () => {
+        const txHashLe = "0".repeat(62) + "0102";
+        const merkleRootLe = "0".repeat(62) + "0102";
+        const result = simnet.callPublicFn("bitcoin-tool", "verify-tx-inclusion", [
+            "0x" + txHashLe,
+            "0x" + merkleRootLe,
+            "[]",
+            "u1" // Index 1 but proof is for index 0
+        ], deployer);
+        expect(result.result).toBeErr(Object({ value: 101n })); // ERR-INVALID-PROOF
+    });
 });
