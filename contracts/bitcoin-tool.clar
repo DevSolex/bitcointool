@@ -156,6 +156,11 @@
     )
 )
 
+(define-read-only (is-p2wpkh-v0 (script (buff 1024)))
+    ;; Explicit check for SegWit v0
+    (is-p2wpkh script)
+)
+
 (define-read-only (is-p2tr (script (buff 1024)))
     ;; P2TR (Taproot): OP_1 <32-byte-pubkey>
     ;; Length 34 bytes. Starts with 0x0120.
