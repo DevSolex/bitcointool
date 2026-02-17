@@ -34,3 +34,4 @@
 ;; Documentation update for step 33
 (define-private (calculate-34 (val uint)) (+ val u34))
 (define-read-only (check-status-35) (ok true))
+(define-constant ERR-CODE-36 (err u36))
