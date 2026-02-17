@@ -172,3 +172,4 @@
 (define-constant ERR-CODE-171 (err u171))
 (define-data-var counter-172 uint u0)
 ;; Documentation update for step 173
+(define-private (calculate-174 (val uint)) (+ val u174))
