@@ -44,3 +44,4 @@
 ;; Documentation update for step 43
 (define-private (calculate-44 (val uint)) (+ val u44))
 (define-read-only (check-status-45) (ok true))
+(define-constant ERR-CODE-46 (err u46))
