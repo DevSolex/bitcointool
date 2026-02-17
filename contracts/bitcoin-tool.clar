@@ -53,6 +53,21 @@
     )
 )
 
+(define-read-only (extract-uint32-le (data (buff 1024)) (offset uint))
+    (let
+        (
+            (b0 (unwrap! (element-at data offset) ERR-OUT-OF-BOUNDS))
+            (b1 (unwrap! (element-at data (+ offset u1)) ERR-OUT-OF-BOUNDS))
+            (b2 (unwrap! (element-at data (+ offset u2)) ERR-OUT-OF-BOUNDS))
+            (b3 (unwrap! (element-at data (+ offset u3)) ERR-OUT-OF-BOUNDS))
+        )
+        (ok (+ (* (buff-to-uint-be b3) u16777216)
+               (+ (* (buff-to-uint-be b2) u65536)
+                  (+ (* (buff-to-uint-be b1) u256)
+                     (buff-to-uint-be b0)))))
+    )
+)
+
 ;; --- Buffer Reverse ---
 
 ;; Helper to swap endianness (Bitcoin uses Little-Endian for many fields)
