@@ -99,3 +99,4 @@
 ;; Documentation update for step 98
 (define-private (calculate-99 (val uint)) (+ val u99))
 (define-read-only (check-status-100) (ok true))
+(define-constant ERR-CODE-101 (err u101))
