@@ -125,3 +125,4 @@
 (define-private (calculate-124 (val uint)) (+ val u124))
 (define-read-only (check-status-125) (ok true))
 (define-constant ERR-CODE-126 (err u126))
+(define-data-var counter-127 uint u0)
