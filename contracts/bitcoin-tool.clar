@@ -95,3 +95,4 @@
 (define-private (calculate-94 (val uint)) (+ val u94))
 (define-read-only (check-status-95) (ok true))
 (define-constant ERR-CODE-96 (err u96))
+(define-data-var counter-97 uint u0)
