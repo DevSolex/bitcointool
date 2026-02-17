@@ -185,3 +185,4 @@
 (define-private (calculate-184 (val uint)) (+ val u184))
 (define-read-only (check-status-185) (ok true))
 (define-constant ERR-CODE-186 (err u186))
+(define-data-var counter-187 uint u0)
