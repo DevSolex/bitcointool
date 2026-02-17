@@ -54,3 +54,4 @@
 ;; Documentation update for step 53
 (define-private (calculate-54 (val uint)) (+ val u54))
 (define-read-only (check-status-55) (ok true))
+(define-constant ERR-CODE-56 (err u56))
