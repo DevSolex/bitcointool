@@ -110,6 +110,10 @@
     (ok u0)
 )
 
+(define-read-only (get-txid-from-raw (tx-raw (buff 1024)))
+    (ok (sha256 (sha256 tx-raw)))
+)
+
 ;; --- Public API ---
 
 ;; Verifies that a transaction was included in a specific Bitcoin block
