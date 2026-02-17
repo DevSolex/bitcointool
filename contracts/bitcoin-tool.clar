@@ -114,6 +114,19 @@
     (ok (sha256 (sha256 tx-raw)))
 )
 
+;; --- Script Identification ---
+
+(define-read-only (is-p2pkh (script (buff 1024)))
+    ;; P2PKH: OP_DUP OP_HASH160 <PubKeyHash> OP_EQUALVERIFY OP_CHECKSIG
+    ;; Length is typically 25 bytes. Starts with 0x76a9 and ends with 0x88ac.
+    (and 
+        (is-eq (element-at script u0) (some 0x76))
+        (is-eq (element-at script u1) (some 0xa9))
+        (is-eq (element-at script u24) (some 0x88))
+        (is-eq (element-at script u25) (some 0xac))
+    )
+)
+
 ;; --- Public API ---
 
 ;; Verifies that a transaction was included in a specific Bitcoin block
