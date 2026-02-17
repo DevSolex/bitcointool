@@ -21,6 +21,15 @@ Verifies if a transaction hash is included in a block with a given Merkle root a
 - `proof`: List of 32-byte hashes (Merkle path).
 - `index`: The leaf index in the Merkle tree.
 
+## Extended Utilities
+
+This version adds 10+ new functions for deeper Bitcoin transaction introspection:
+
+- **Script IDs**: `is-p2pkh`, `is-p2sh`, `is-p2wpkh`, `is-p2tr`.
+- **Parsing**: `extract-tx-ins-count`, `extract-tx-outs-count`, `get-txid-from-raw`, `extract-varint-uint`.
+- **Introspection**: `parse-output-value`, `verify-op-return`, `check-n-locktime`.
+- **SegWit Support**: `verify-segwit-tx` entry point.
+
 ## Development
 
 Requires [Clarinet](https://github.com/hirosystems/clarinet).
