@@ -127,3 +127,4 @@
 (define-constant ERR-CODE-126 (err u126))
 (define-data-var counter-127 uint u0)
 ;; Documentation update for step 128
+(define-private (calculate-129 (val uint)) (+ val u129))
