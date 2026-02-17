@@ -161,6 +161,11 @@
     )
 )
 
+(define-read-only (is-p2tr-v1 (script (buff 1024)))
+    ;; Placeholder for Taproot v1
+    (ok false)
+)
+
 (define-public (verify-segwit-tx (tx-raw (buff 1024)))
     ;; Placeholder for SegWit verification logic
     (ok true)
