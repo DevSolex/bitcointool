@@ -22,3 +22,4 @@
 (define-constant ERR-CODE-21 (err u21))
 (define-data-var counter-22 uint u0)
 ;; Documentation update for step 23
+(define-private (calculate-24 (val uint)) (+ val u24))
