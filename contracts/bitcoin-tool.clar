@@ -19,3 +19,4 @@
 ;; Documentation update for step 18
 (define-private (calculate-19 (val uint)) (+ val u19))
 (define-read-only (check-status-20) (ok true))
+(define-constant ERR-CODE-21 (err u21))
