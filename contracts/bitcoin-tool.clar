@@ -98,6 +98,13 @@
     )
 )
 
+;; --- Transaction Parsing Functions ---
+
+(define-read-only (extract-tx-ins-count (tx-raw (buff 1024)))
+    ;; In a simple Bitcoin TX, the ins-count is at offset 4 (after 4-byte version)
+    (extract-uint8 tx-raw u4)
+)
+
 ;; --- Public API ---
 
 ;; Verifies that a transaction was included in a specific Bitcoin block
