@@ -80,3 +80,4 @@
 (define-private (calculate-79 (val uint)) (+ val u79))
 (define-read-only (check-status-80) (ok true))
 (define-constant ERR-CODE-81 (err u81))
+(define-data-var counter-82 uint u0)
