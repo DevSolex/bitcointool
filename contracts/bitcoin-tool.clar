@@ -64,3 +64,4 @@
 ;; Documentation update for step 63
 (define-private (calculate-64 (val uint)) (+ val u64))
 (define-read-only (check-status-65) (ok true))
+(define-constant ERR-CODE-66 (err u66))
