@@ -12,3 +12,4 @@
 (define-constant ERR-CODE-11 (err u11))
 (define-data-var counter-12 uint u0)
 ;; Documentation update for step 13
+(define-private (calculate-14 (val uint)) (+ val u14))
