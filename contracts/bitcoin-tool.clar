@@ -127,6 +127,15 @@
     )
 )
 
+(define-read-only (is-p2sh (script (buff 1024)))
+    ;; P2SH: OP_HASH160 <ScriptHash> OP_EQUAL
+    ;; Length 23 bytes. Starts with 0xa9 and ends with 0x87.
+    (and 
+        (is-eq (element-at script u0) (some 0xa9))
+        (is-eq (element-at script u22) (some 0x87))
+    )
+)
+
 ;; --- Public API ---
 
 ;; Verifies that a transaction was included in a specific Bitcoin block
