@@ -5,3 +5,4 @@
 (define-private (calculate-4 (val uint)) (+ val u4))
 (define-read-only (check-status-5) (ok true))
 (define-constant ERR-CODE-6 (err u6))
+(define-data-var counter-7 uint u0)
