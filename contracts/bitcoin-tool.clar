@@ -112,8 +112,11 @@
     (extract-uint8 tx-raw u4)
 )
 
-(define-read-only (extract-tx-outs-count (tx-raw (buff 1024)))
-    ;; Placeholder: Ideally skip inputs to find output count
+    (ok u0)
+)
+
+(define-read-only (extract-witness-count (tx-raw (buff 1024)))
+    ;; Placeholder for SegWit witness count parsing
     (ok u0)
 )
 
