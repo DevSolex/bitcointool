@@ -13,7 +13,8 @@
 (define-constant SCRIPT-P2PKH u1)
 (define-constant SCRIPT-P2SH u2)
 (define-constant SCRIPT-P2WPKH u3)
-(define-constant SCRIPT-OP-RETURN u4)
+(define-constant SCRIPT-P2TR u4)
+(define-constant SCRIPT-OP-RETURN u5)
 
 ;; --- Merkle Proof Verification ---
 
