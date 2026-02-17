@@ -118,4 +118,16 @@ describe("bitcointool test suite", () => {
         ], deployer);
         expect(result.result).toBeOk(Object({ value: true }));
     });
+
+    it("should fail inclusion check with invalid proof", () => {
+        const txHashLe = "0".repeat(62) + "0102";
+        const merkleRootLe = "0".repeat(62) + "abcd"; // Different root
+        const result = simnet.callPublicFn("bitcoin-tool", "verify-tx-inclusion", [
+            "0x" + txHashLe,
+            "0x" + merkleRootLe,
+            "[]",
+            "u0"
+        ], deployer);
+        expect(result.result).toBeErr(Object({ value: 101n })); // ERR-INVALID-PROOF
+    });
 });
