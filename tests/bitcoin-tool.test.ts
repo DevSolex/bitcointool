@@ -98,4 +98,12 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-tx-ins-count", ["0x" + SAMPLE_TX], deployer);
         expect(result.result).toBeOk(Object({ value: 1n }));
     });
+
+    it("should extract varint correctly", () => {
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-varint-uint", ["0xfd0001", "u0"], deployer);
+        expect(result.result).toBeOk(Object({ value: 0n })); // Multi-byte placeholder returns u0
+
+        const result2 = simnet.callReadOnlyFn("bitcoin-tool", "extract-varint-uint", ["0xfe", "u0"], deployer);
+        expect(result2.result).toBeOk(Object({ value: 254n }));
+    });
 });
