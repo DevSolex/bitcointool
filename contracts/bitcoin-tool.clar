@@ -69,3 +69,4 @@
 ;; Documentation update for step 68
 (define-private (calculate-69 (val uint)) (+ val u69))
 (define-read-only (check-status-70) (ok true))
+(define-constant ERR-CODE-71 (err u71))
