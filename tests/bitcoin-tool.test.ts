@@ -40,4 +40,11 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "reverse-buff32", ["0x" + input], deployer);
         expect(result.result).toBe("0x" + expected);
     });
+
+    it("should reverse a full 32-byte buffer complexity test", () => {
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "reverse-buff32", ["0x" + SAMPLE_32_BYTE], deployer);
+        // Expect reversed SAMPLE_32_BYTE
+        const reversed = Array.from({ length: 32 }, (_, i) => (31 - i).toString(16).padStart(2, '0')).join('');
+        expect(result.result).toBe("0x" + reversed);
+    });
 });
