@@ -50,3 +50,4 @@
 (define-private (calculate-49 (val uint)) (+ val u49))
 (define-read-only (check-status-50) (ok true))
 (define-constant ERR-CODE-51 (err u51))
+(define-data-var counter-52 uint u0)
