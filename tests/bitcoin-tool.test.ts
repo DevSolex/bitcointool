@@ -17,4 +17,9 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-uint8", ["0x" + SAMPLE_BUFFER, "u1"], deployer);
         expect(result.result).toBeOk(Object({ value: 2n }));
     });
+
+    it("should fail to extract uint8 out of bounds", () => {
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-uint8", ["0x" + SAMPLE_BUFFER, "u10"], deployer);
+        expect(result.result).toBeErr(Object({ value: 104n })); // ERR-OUT-OF-BOUNDS
+    });
 });
