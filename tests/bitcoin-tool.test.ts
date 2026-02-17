@@ -33,4 +33,11 @@ describe("bitcointool test suite", () => {
         const result = simnet.callReadOnlyFn("bitcoin-tool", "extract-uint32-le", ["0x01020304", "u1"], deployer);
         expect(result.result).toBeErr(Object({ value: 104n })); // ERR-OUT-OF-BOUNDS
     });
+
+    it("should reverse a 32-byte buffer correctly", () => {
+        const input = "0".repeat(62) + "0102";
+        const expected = "0201" + "0".repeat(60);
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "reverse-buff32", ["0x" + input], deployer);
+        expect(result.result).toBe("0x" + expected);
+    });
 });
