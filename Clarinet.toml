@@ -1,0 +1,18 @@
+[project]
+name = 'bitcointool'
+description = 'Bitcoin tools on Stacks'
+authors = []
+telemetry = false
+cache_dir = './.cache'
+requirements = []
+[contracts.bitcoin-tool]
+path = 'contracts/bitcoin-tool.clar'
+clarity_version = 2
+epoch = 'latest'
+[repl.analysis]
+passes = ['check_checker']
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
