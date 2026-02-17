@@ -5,6 +5,9 @@
 (define-constant ERR-NOT-AUTHORIZED (err u100))
 (define-constant ERR-INVALID-PROOF (err u101))
 (define-constant ERR-DECODING-FAILED (err u102))
+(define-constant ERR-INVALID-TX (err u103))
+(define-constant ERR-OUT-OF-BOUNDS (err u104))
+(define-constant ERR-UNKNOWN-SCRIPT-TYPE (err u105))
 
 ;; --- Merkle Proof Verification ---
 
