@@ -40,3 +40,4 @@
 (define-private (calculate-39 (val uint)) (+ val u39))
 (define-read-only (check-status-40) (ok true))
 (define-constant ERR-CODE-41 (err u41))
+(define-data-var counter-42 uint u0)
