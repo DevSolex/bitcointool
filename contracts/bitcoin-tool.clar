@@ -117,8 +117,12 @@
     (ok u0)
 )
 
-(define-read-only (get-txid-from-raw (tx-raw (buff 1024)))
     (ok (sha256 (sha256 tx-raw)))
+)
+
+(define-read-only (extract-vout-script-pubkey (tx-raw (buff 1024)) (output-index uint))
+    ;; Placeholder for skip logic to find ScriptPubKey
+    (ok 0x)
 )
 
 ;; --- Script Identification ---
