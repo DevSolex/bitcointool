@@ -47,4 +47,11 @@ describe("bitcointool test suite", () => {
         const reversed = Array.from({ length: 32 }, (_, i) => (31 - i).toString(16).padStart(2, '0')).join('');
         expect(result.result).toBe("0x" + reversed);
     });
+
+    it("should identify P2PKH script correctly", () => {
+        // P2PKH: 76 a9 14 <20-byte-hash> 88 ac
+        const script = "76a914" + "0".repeat(40) + "88ac";
+        const result = simnet.callReadOnlyFn("bitcoin-tool", "is-p2pkh", ["0x" + script], deployer);
+        expect(result.result).toBeBool(true);
+    });
 });
